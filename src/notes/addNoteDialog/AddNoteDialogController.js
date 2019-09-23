@@ -1,5 +1,3 @@
-import uuidv1 from 'uuid/v1'
-
 import dialog from './add-note-dialog.html'
 import './add-note-dialog.scss';
 

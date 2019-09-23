@@ -1,0 +1,24 @@
+@import '../../../styles/common';
+
+#notes-actions {
+  .md-toast-content {
+    background: red;
+    color: white;
+
+    .fa {
+      color: white;
+    }
+
+    .md-button {
+      min-width: 80px;
+
+      &.notes-action-no {
+        border: solid 1px white;
+      }
+      &.notes-action-yes {
+        background: white;
+        color: red;
+      }
+    }
+  }
+}

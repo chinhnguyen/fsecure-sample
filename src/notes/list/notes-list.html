@@ -18,7 +18,7 @@
   </tr>
   <tr ng-repeat="r in rows">
     <td>
-      <md-checkbox ng-model="r.selected" aria-label="select {{r.title}}"></md-checkbox>
+      <md-checkbox ng-checked="isSelected(r)" aria-label="select {{r.title}}" ng-click="toggleSelection(r)"></md-checkbox>
     </td>
     <td>{{r.id}}</td>
     <td>{{r.title}}</td>

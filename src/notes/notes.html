@@ -1,7 +1,11 @@
-<div layout="row" class="main-content">
+<div layout="row" class="main-content" id="notes-container">
   <div flex layout="column" layout-align="start start">
     <notes-statistic summary="$ctrl.summary"></notes-statistic>
-    <notes-list notes="$ctrl.notes" sorted-by="$ctrl.sortedBy" sorted-by-change="$ctrl.reload()"></notes-list>
+    <notes-list notes="$ctrl.notes" 
+      sorted-by="$ctrl.sortedBy" 
+      selected-notes="$ctrl.selectedNotes"
+      sorted-by-change="$ctrl.reload()", 
+      selected-change="$ctrl.onSelectedChanged()"></notes-list>
     <div id="notes-actions" layout="row" layout-align="end center">
       <md-button class="md-primary md-raised" ng-click="$ctrl.add($event)">Add</md-button>
     </div>
