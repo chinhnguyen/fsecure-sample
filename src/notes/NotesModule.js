@@ -7,6 +7,9 @@ import './notes.scss'
 import notesService from './NotesService'
 
 import NotesStatistic from './statistic/NotesStatistic'
+
+import NotesList from './list/NotesList'
+import NotesTableHeader from './list/NotesTableHeader'
  
 function routes($stateProvider) {
   $stateProvider.state('notes', {
@@ -22,5 +25,7 @@ export default angular
   ])
   .service('notesService', notesService)
   .directive("notesStatistic", () => new NotesStatistic)
+  .directive("notesTh", () => new NotesTableHeader)
+  .directive("notesList", () => new NotesList)
   .controller(notesController.name, notesController)
   .config(routes)

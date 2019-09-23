@@ -54,7 +54,10 @@ module.exports = (_, argv) => {
       }),
       new FaviconsWebpackPlugin('./images/favicon.png'),
       new CopyWebpackPlugin([
-        { from: 'images/', to: 'images/' },
+        { 
+          from: 'images/', 
+          to: 'images/' 
+        },
       ]),
       new LodashModuleReplacementPlugin({
         'collections': true,

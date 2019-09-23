@@ -1,4 +1,5 @@
 @import "common";
+@import "~ng-table/src/styles/ng-table";
 
 html, body {
   font-family: 'Roboto', sans-serif;
@@ -31,4 +32,5 @@ tr, th, td {
   max-width: 1024px;
   background: #ececec;
   margin: auto;
+  padding: $guideline*2 $guideline*4;
 }

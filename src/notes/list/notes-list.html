@@ -1,0 +1,28 @@
+<table show-filter="false" id="notes-table" class="table">
+  <tr class="col-check">
+    <th class="col col-select">
+      <md-checkbox ng-checked="isAllSelected()" aria-label="select all" ng-click="toggleSelectAll()"></md-checkbox>
+    </th>
+    <th class="col col-id">
+      <notes-th title="ID" sorted="sortedBy.id" ng-click="sortedByChange()"></notes-th>
+    </th>
+    <th class="col col-title">
+      <notes-th title="Title" sorted="sortedBy.title" ng-click="sortedByChange()"></notes-th>
+    </th>
+    <th class="col ol-content">
+      <notes-th title="Content" sorted="sortedBy.content" ng-click="sortedByChange()"></notes-th>
+    </th>
+    <th class="col col-status">
+      <notes-th title="Status" sorted="sortedBy.status" ng-click="sortedByChange()"></notes-th>
+    </th>
+  </tr>
+  <tr ng-repeat="r in rows">
+    <td>
+      <md-checkbox ng-model="r.selected" aria-label="select {{r.title}}"></md-checkbox>
+    </td>
+    <td>{{r.id}}</td>
+    <td>{{r.title}}</td>
+    <td>{{r.content}}</td>
+    <td>{{r.status}}</td>
+  </tr>
+</table>

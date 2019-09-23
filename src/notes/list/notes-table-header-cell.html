@@ -1,0 +1,9 @@
+ <md-button ng-click="toggle()">
+   <div layout="row">
+     <span flex>{{title}}</span>
+     <div layout="column">
+       <md-icon md-font-icon="fa-angle-up" class="fa" ng-class="{selected: sorted==='asc'}"></md-icon>
+       <md-icon md-font-icon="fa-angle-down" class="fa" ng-class="{selected: sorted==='desc'}"></md-icon>
+     </div>
+   </div>  
+</md-button>

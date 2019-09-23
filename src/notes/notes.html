@@ -1,7 +1,6 @@
 <div layout="row" class="main-content">
   <div flex layout="column" layout-align="start start">
-    <notes-statistic summary="$ctrl.summary"/>
-
-
+    <notes-statistic summary="$ctrl.summary"></notes-statistic>
+    <notes-list notes="$ctrl.notes" sorted-by="$ctrl.sortedBy" sorted-by-change="$ctrl.reload()"></notes-list>
   </div>
 </div>
