@@ -1,0 +1,20 @@
+
+@import '../../../styles/common';
+
+#statistic-card {
+  padding: $guideline*3 $guideline*2;
+
+  .statistic-cell {
+    width: 120px;
+
+    .md-caption {
+      opacity: 0.5;
+      display: block;    
+    }
+  
+    .md-headline {
+      display: block;
+      opacity: 0.75;
+    }
+  }
+}

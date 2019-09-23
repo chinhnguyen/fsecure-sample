@@ -14,8 +14,9 @@ import notesModule from './notes/NotesModule'
 
 function config($uiRouterProvider, $mdThemingProvider) {
   // Setup MD default theme
-  $mdThemingProvider.theme('default')
-    .primaryPalette('blue').dark()
+  $mdThemingProvider
+    .theme('default')
+    .primaryPalette('blue')
     .accentPalette('grey')
     .warnPalette('red')
   // .backgroundPalette('grey')

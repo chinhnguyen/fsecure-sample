@@ -1,0 +1,16 @@
+<md-card id="statistic-card">
+  <div layout="row">
+    <div flex class="statistic-cell">
+      <span class="md-caption md-hue-3">Total</span>
+      <span class="md-headline">{{summary.total}}</span>
+    </div>
+    <div flex class="statistic-cell">
+      <span class="md-caption">Completed</span>
+      <span class="md-headline">{{summary.completed}}</span>
+    </div>
+    <div flex class="statistic-cell">
+      <span class="md-caption">Not completed</span>
+      <span class="md-headline">{{summary.total - summary.completed}}</span>
+    </div>
+  </div>
+</md-card>

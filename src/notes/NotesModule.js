@@ -5,6 +5,8 @@ import notesView from './notes.html'
 import './notes.scss'
 
 import notesService from './NotesService'
+
+import NotesStatistic from './statistic/NotesStatistic'
  
 function routes($stateProvider) {
   $stateProvider.state('notes', {
@@ -19,5 +21,6 @@ export default angular
   .module('app.notes', [
   ])
   .service('notesService', notesService)
+  .directive("notesStatistic", () => new NotesStatistic)
   .controller(notesController.name, notesController)
   .config(routes)
