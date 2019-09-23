@@ -1,0 +1,36 @@
+<md-dialog id="dialog-add-note" aria-label="add new note">
+  <form name="noteForm" ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>News</h2>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <md-input-container class="md-block">
+          <label>Title</label>
+          <input name="title" ng-model="note.title" required></input>
+          <div ng-show="noteForm.$submitted || noteForm.title.$touched" ng-messages="noteForm.title.$error">
+            <div ng-message="required">Title is required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Content</label>
+          <textarea name="content" ng-model="note.content" required rows="3"></textarea>
+          <div ng-show="noteForm.$submitted || noteForm.content.$touched" ng-messages="noteForm.content.$error">
+            <div ng-message="required">Content is required.</div>
+          </div>
+        </md-input-container>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <md-button class="md-raised md-primary" ng-disabled="noteForm.$invalid" ng-click="save()">
+        Save
+      </md-button>
+      <md-button class="md-primary" ng-click="close()">Cancel</md-button>
+      <span flex></span>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

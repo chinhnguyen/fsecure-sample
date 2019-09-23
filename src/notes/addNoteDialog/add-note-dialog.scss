@@ -1,0 +1,10 @@
+@import '../../../styles/common';
+
+#dialog-add-note {
+  min-width: 480px;
+
+  .md-toolbar-tools {
+    background: white;
+    color: black;
+  }
+}

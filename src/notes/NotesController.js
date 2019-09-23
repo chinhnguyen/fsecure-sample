@@ -1,8 +1,11 @@
 import { isArray, isFunction } from 'util'
 
+import { showAddNoteDialog } from './addNoteDialog/AddNoteDialogController'
+
 export default class NotesController {
-  constructor(notesService) {
+  constructor(notesService, $mdDialog) {
     this.notesService = notesService    
+    this.$mdDialog = $mdDialog
   }
 
   $onInit() {
@@ -17,5 +20,10 @@ export default class NotesController {
       this.summary = this.notesService.summary
       this.notes = this.notesService.notes
     })
+  }
+
+  add(event) {
+    showAddNoteDialog(this.$mdDialog, event)
+      .then(() => this.reload())
   }
 }

@@ -2,5 +2,8 @@
   <div flex layout="column" layout-align="start start">
     <notes-statistic summary="$ctrl.summary"></notes-statistic>
     <notes-list notes="$ctrl.notes" sorted-by="$ctrl.sortedBy" sorted-by-change="$ctrl.reload()"></notes-list>
+    <div id="notes-actions" layout="row" layout-align="end center">
+      <md-button class="md-primary md-raised" ng-click="$ctrl.add($event)">Add</md-button>
+    </div>
   </div>
 </div>

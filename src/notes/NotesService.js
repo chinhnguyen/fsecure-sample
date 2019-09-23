@@ -1,4 +1,4 @@
-import { orderBy, keys, each, isEmpty } from 'lodash'
+import { orderBy, keys, each, isEmpty, maxBy } from 'lodash'
 import { isNullOrUndefined } from 'util'
 
 const mockNotes = [
@@ -52,6 +52,18 @@ export default class NotesService {
       deferred.resolve()
     }, 0)
 
+    return deferred.promise
+  }
+
+  add(note) {
+    const deferred = this.$q.defer()
+    setTimeout(() => {
+      console.log(note)
+      note.id = maxBy(mockNotes, 'id').id + 1
+      note.status = 'New'
+      mockNotes.push(note)
+      deferred.resolve()
+    }, 0)
     return deferred.promise
   }
 }

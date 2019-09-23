@@ -1,6 +1,6 @@
 import * as angular from 'angular'
 
-import notesController from './NotesCtrl'
+import notesController from './NotesController'
 import notesView from './notes.html'
 import './notes.scss'
 
@@ -21,8 +21,7 @@ function routes($stateProvider) {
 }
 
 export default angular
-  .module('app.notes', [
-  ])
+  .module('app.notes', [ 'ngMessages' ])
   .service('notesService', notesService)
   .directive("notesStatistic", () => new NotesStatistic)
   .directive("notesTh", () => new NotesTableHeader)
